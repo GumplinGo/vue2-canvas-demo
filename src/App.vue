@@ -199,7 +199,12 @@ export default {
       return parseInt(Math.random() * max);
     },
     handleCheckArea() {
-      this.GJLDraw.checkArea();
+      const result = this.GJLDraw.checkArea();
+      if (result) {
+        alert("不交叉");
+      } else {
+        alert("交叉");
+      }
     },
   },
 };

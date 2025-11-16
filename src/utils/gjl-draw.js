@@ -419,12 +419,7 @@ export default class GJLDraw {
   checkArea() {
     let isPass = true;
     this.areaArr.forEach((item) => {
-      console.log(
-        "intersects(item.area): ",
-        checkLineToLine(item.area[0], item.area)
-      );
-      console.log("item.area: ", item.area);
-      if (!checkLineToLine(item.area[0], item.area)) {
+      if (!checkLineToLine(item.area)) {
         isPass = false;
       }
     });
